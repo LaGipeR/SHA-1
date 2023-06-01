@@ -1,6 +1,6 @@
 use LongInt::LongInt;
 
-struct SHA1 {
+pub struct SHA1 {
     last_block: Vec<bool>,
     result_a: u32,
     result_b: u32,
