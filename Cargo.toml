@@ -2,8 +2,14 @@
 name = "sha1"
 version = "0.1.0"
 edition = "2021"
-
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
 LongInt = {git="https://github.com/LaGipeR/LongInt"}
+
+[dev-dependencies]
+other_sha = {package = "sha-1", version = "0.10.1"}
+
+[[example]]
+name = "result_check"
+path = "examples/test_with_other_sha_realization.rs"

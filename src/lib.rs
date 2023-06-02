@@ -211,16 +211,30 @@ mod tests {
         let a = sha.finalize();
         assert_eq!(a.getHex(), "ba79baeb9f10896a46ae74715271b7f586e74640");
 
-        sha.add(&*u8_slice_to_bool(b"da39a3ee5e6b4b0d3255bfef95601890afd80709".as_slice()));
+        sha.add(&*u8_slice_to_bool(
+            b"da39a3ee5e6b4b0d3255bfef95601890afd80709".as_slice(),
+        ));
         let a = sha.finalize();
         assert_eq!(a.getHex(), "10a34637ad661d98ba3344717656fcc76209c2f8");
 
-        sha.add(&*u8_slice_to_bool(b"da39a3ee5e6b4b0d3255bfef95601890afd80709".as_slice()));
-        sha.add(&*u8_slice_to_bool(b"10a34637ad661d98ba3344717656fcc76209c2f8".as_slice()));
-        sha.add(&*u8_slice_to_bool(b"7c2229e9d8448e3fbd61f080c99afcccc165c5ac".as_slice()));
-        sha.add(&*u8_slice_to_bool(b"316a45578b56e1488bfdc0d694b59d649b2dab83".as_slice()));
-        sha.add(&*u8_slice_to_bool(b"59253cd4beeb1b2d3f2fd8d28aefc39ef7979fdd".as_slice()));
-        sha.add(&*u8_slice_to_bool(b"5eaeb22e983ab50b5a3eef6b2deeffac98c21a72".as_slice()));
+        sha.add(&*u8_slice_to_bool(
+            b"da39a3ee5e6b4b0d3255bfef95601890afd80709".as_slice(),
+        ));
+        sha.add(&*u8_slice_to_bool(
+            b"10a34637ad661d98ba3344717656fcc76209c2f8".as_slice(),
+        ));
+        sha.add(&*u8_slice_to_bool(
+            b"7c2229e9d8448e3fbd61f080c99afcccc165c5ac".as_slice(),
+        ));
+        sha.add(&*u8_slice_to_bool(
+            b"316a45578b56e1488bfdc0d694b59d649b2dab83".as_slice(),
+        ));
+        sha.add(&*u8_slice_to_bool(
+            b"59253cd4beeb1b2d3f2fd8d28aefc39ef7979fdd".as_slice(),
+        ));
+        sha.add(&*u8_slice_to_bool(
+            b"5eaeb22e983ab50b5a3eef6b2deeffac98c21a72".as_slice(),
+        ));
         let a = sha.finalize();
         assert_eq!(a.getHex(), "a3bd4137b0e29adb6e38e2befc9b1d933b5341d1");
     }
