@@ -1,4 +1,4 @@
-use LongInt::LongInt;
+use long_int::LongInt;
 
 pub struct SHA1 {
     last_block: Vec<bool>,
